@@ -1,18 +1,19 @@
-#include "main.h"
 #include <stdarg.h>
 #include <stdio.h>
+#include "main.h"
 
 /**
- * print_char - function to print out characters
+ * print_str - function to print out strings
  * @format: input
  *
- * Return: void
+ * Return void
  */
-void print_char(const char *format, ...)
+
+void print_str(const char *format, ...)
 {
+	int i = 0;
+	char *s;
 	va_list arg;
-	int i;
-	char c;
 
 	va_start(arg, format);
 	while (*format != '\0')
@@ -22,14 +23,18 @@ void print_char(const char *format, ...)
 			format++;
 			switch (*format)
 			{
-			case 'c':
-				c = (char)va_arg(arg, int);
-				_putchar(c);
-				i++;
+			case 's':
+				s = va_arg(arg, char *);
+				while (*s != '\0')
+				{
+					_putchar(*s);
+					i++;
+					s++;
+				}
 				break;
 			default:
 				_putchar('%');
-				_putchar(*format);	
+				_putchar(*format);
 			}
 		}
 		else
@@ -40,4 +45,3 @@ void print_char(const char *format, ...)
 		format++;
 	}
 	va_end(arg);
-}
