@@ -29,6 +29,6 @@ int printf_input_pointer(va_list par)
 	a = (unsigned long int)pointer;
 	_putchar('0');
 	_putchar('x');
-	b = printf_hex_aux(a);
+	b = printf_hex_helper(a);
 	return (b + 2);
 }
