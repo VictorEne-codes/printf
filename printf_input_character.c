@@ -2,16 +2,16 @@
 
 /**
  * printf_character - funcyion to print character to stdout
- * @val: input
+ * @par: input
  *
  * Return: integer 1 if success
  */
 
-int printf_input_character(va_list val)
+int printf_input_character(va_list par)
 {
 	char string;
 
-	string = va_arg(val, int);
+	string = va_arg(par, int);
 	_putchar(string);
 	return (1);
 }

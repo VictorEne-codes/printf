@@ -7,6 +7,6 @@
 
 int printf_input_percentage(void)
 {
-	_putcha('%');
+	_putchar('%');
 	return (1);
 }

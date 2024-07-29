@@ -2,17 +2,17 @@
 
 /**
  * printf_string - function to print string to stdout
- * @val: input
+ * @par: input
  *
  * Return: int
  */
 
-int printf_input_string(va_list val)
+int printf_input_string(va_list par)
 {
 	char *string;
 	int i = 0, length;
 
-	string = va_arg(val, char *);
+	string = va_arg(par, char *);
 	if (string == NULL)
 	{
 		string = "(null)";
