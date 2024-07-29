@@ -1,12 +1,13 @@
+#include <stdlib.h>
+#include <stdio.h>
+#include <stdarg.h>
 #ifndef MAIN_H
 #define MAIN_H
 
-#include <stdarg.h>
-#include <stdlib.h>
-
-
 int _putchar(char c);
 int _printf(const char *format, ...);
+int printf_input_hexa(va_list par);
+int printf_input_HEXA(va_list par);
 int printf_input_character(va_list par);
 int printf_input_string(va_list par);
 int printf_input_percentage(void);

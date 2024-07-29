@@ -1,12 +1,12 @@
 #include "main.h"
 /**
  * printf_input_int - prints an integer
- * @val: is the argument to be printed
+ * @par: is the argument to be printed
  * Return: the number of integers printed
  */
-int printf_input_int(va_list val)
+int printf_input_int(va_list par)
 {
-	int n = va_arg(val, int);
+	int n = va_arg(par, int);
 	int num, end = n % 10, digit, ex = 1;
 	int  i = 1;
 
@@ -45,13 +45,13 @@ int printf_input_int(va_list val)
 
 /**
  * printf_input_dec - prints decimal
- * @val: the argument to be printed
+ * @par: the argument to be printed
  * Return: the number of integers printed
  */
 
-int printf_input_dec(va_list val)
+int printf_input_dec(va_list par)
 {
-	int n = va_arg(val, int);
+	int n = va_arg(par, int);
 	int num, end = n % 10, digit;
 	int  i = 1;
 	int ex = 1;
