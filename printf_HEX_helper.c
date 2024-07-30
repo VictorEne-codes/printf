@@ -7,7 +7,7 @@
  * Return: int
  */
 
-int printf_HEX_helper(unsigned long int n)
+int printf_HEX_helper(unsigned int n)
 {
 	long int i;
 	long int *arr;

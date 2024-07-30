@@ -13,15 +13,14 @@ int printf_input_pointer(va_list par)
 	char *string = "(nil)";
 	long int a;
 	int b;
-	int i = 0;
+	int i;
 
 	pointer = va_arg(par, void*);
 	if (pointer == NULL)
 	{
-		while (string[i] != '\0')
+		for (i = 0; string[i] != '\0'; i++)
 		{
 			_putchar(string[i]);
-			i++;
 		}
 		return (i);
 	}
