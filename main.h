@@ -17,13 +17,14 @@ int printf_input_int(va_list par);
 int printf_input_dec(va_list par);
 int printf_bin(va_list par);
 int printf_input_exclusive_string(va_list par);
-int printf_HEX_helper(unsigned int n);
+int printf_HEX_helper(unsigned long int n);
 int printf_input_pointer(va_list par);
-int printf_hex_helper(unsigned int n);
+int printf_hex_helper(unsigned long int n);
 int printf_input_reverse_str(va_list par);
 int find_strlen(char *c);
 int find_strlens(const char *c);
 int printf_input_rot13(va_list par);
+int handle_flags(const char *format, int *n);
 
 /**
  * struct format - a structure to match the conversion specifiers

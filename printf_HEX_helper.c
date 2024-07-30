@@ -7,12 +7,12 @@
  * Return: int
  */
 
-int printf_HEX_helper(unsigned int n)
+int printf_HEX_helper(unsigned long int n)
 {
-	int i = 0;
-	int *arr;
-	int count = 0;
-	unsigned int temp = n;
+	long int i;
+	long int *arr;
+	long int count = 0;
+	unsigned long int temp = n;
 
 	while (n / 16 != 0)
 	{
@@ -20,23 +20,20 @@ int printf_HEX_helper(unsigned int n)
 		count++;
 	}
 	count++;
-	arr = malloc(count * sizeof(int));
+	arr = malloc(count * sizeof(long int));
 
-	while (i < count)
+	for (i = 0; i < count; i++)
 	{
 		arr[i] = temp % 16;
 		temp /= 16;
-		i++;
 	}
-	i = count - 1;
-	while (i >= 0)
+	for (i = count - 1; i >= 0; i--)
 	{
 		if (arr[i] > 9)
 		{
 			arr[i] = arr[i] + 7;
 		}
 		_putchar(arr[i] + '0');
-		i--;
 	}
 	free(arr);
 	return (count);
