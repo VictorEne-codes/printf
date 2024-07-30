@@ -16,7 +16,7 @@ int printf_input_string(va_list par)
 	if (string == NULL)
 	{
 		string = "(null)";
-		length = _strlen(string);
+		length = find_strlen(string);
 		while (i < length)
 		{
 			_putchar(string[i]);
@@ -25,7 +25,7 @@ int printf_input_string(va_list par)
 	}
 	else
 	{
-		length = _strlen(string);
+		length = find_strlen(string);
 		while (i < length)
 		{
 			_putchar(string[i]);
