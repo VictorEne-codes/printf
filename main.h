@@ -6,7 +6,6 @@
 
 int _putchar(char c);
 int _printf(const char *format, ...);
-int printf_37(void);
 int printf_input_hexa(va_list par);
 int printf_input_HEXA(va_list par);
 int printf_unsigned_int(va_list par);
