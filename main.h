@@ -23,7 +23,7 @@ int printf_hex_helper(unsigned int n);
 int printf_input_reverse_str(va_list par);
 int find_strlen(char *c);
 int find_strlens(const char *c);
-
+int get_flags(const char *format, int *i);
 
 /**
  * struct format - a structure to match the conversion specifiers
