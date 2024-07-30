@@ -20,7 +20,7 @@ int printf_hex_helper(unsigned int n)
 		count++;
 	}
 	count++;
-	arr = malloc(count * sizeof(int));
+	arr = malloc(count * sizeof(char));
 
 	while (i < count)
 	{

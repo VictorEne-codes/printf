@@ -9,7 +9,7 @@
 
 int printf_HEX_helper(unsigned int n)
 {
-	int i = 0;
+	int digit, i = 0;
 	int *arr;
 	int count = 0;
 	unsigned int temp = n;
@@ -20,23 +20,24 @@ int printf_HEX_helper(unsigned int n)
 		count++;
 	}
 	count++;
-	arr = malloc(count * sizeof(int));
-
+	arr = malloc(count * sizeof(char));
 	while (i < count)
 	{
-		arr[i] = temp % 16;
+		digit = temp % 16;
+		if (digit < 10)
+		{
+			arr[i] = digit + '0';
+		}
+		else
+		{
+			arr[i] = digit - 10 + 'A';
+		}
 		temp /= 16;
 		i++;
 	}
-	i = count - 1;
-	while (i >= 0)
+	for (i = count - 1; i >= 0; i--)
 	{
-		if (arr[i] > 9)
-		{
-			arr[i] = arr[i] + 7;
-		}
-		_putchar(arr[i] + '0');
-		i--;
+		_putchar(arr[i]);
 	}
 	free(arr);
 	return (count);
