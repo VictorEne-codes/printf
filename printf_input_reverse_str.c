@@ -17,7 +17,7 @@ int printf_input_reverse_str(va_list par)
 	{
 		string = "(null)";
 	}
-	while (s[j] != '\0')
+	while (string[j] != '\0')
 	{
 		j++;
 	}

@@ -24,4 +24,18 @@ int printf_input_reverse_str(va_list par);
 int find_strlen(char *c);
 int find_strlens(const char *c);
 
+
+/**
+ * struct format - a structure to match the conversion specifiers
+ * @id: d, i, u, o, x, X
+ * @f: type pointer 
+ */
+
+typedef struct format
+{
+	char *id;
+	int (*f)();
+} format_match;
+
+
 #endif

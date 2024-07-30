@@ -7,8 +7,8 @@
 int printf_unsigned_int(va_list par)
 {
 	int  i = 1;
-	int num, end = n % 10, dgt, ex = 1;
 	unsigned int n = va_arg(par, unsigned int);
+	int num, end = n % 10, dgt, ex = 1;
 
 	n /= 10;
 	num = n;

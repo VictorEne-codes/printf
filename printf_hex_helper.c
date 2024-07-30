@@ -22,7 +22,7 @@ int printf_hex_helper(unsigned int n)
 	count++;
 	arr = malloc(count * sizeof(int));
 
-	while (i < counter)
+	while (i < count)
 	{
 		arr[i] = temp % 16;
 		temp /= 16;

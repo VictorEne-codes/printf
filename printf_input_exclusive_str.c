@@ -1,13 +1,13 @@
 #include "main.h"
 
 /**
- * printf_input_exclusive_strings - print all exclusive strings in ASCII
+ * printf_input_exclusive_string - print all exclusive strings in ASCII
  * @par: input
  *
  * Return: int
  */
 
-int printf_input_exclusive_strings(va_list par)
+int printf_input_exclusive_string(va_list par)
 {
 	char *string;
 	int i = 0, length = 0;
