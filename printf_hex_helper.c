@@ -9,7 +9,7 @@
 
 int printf_hex_helper(unsigned int n)
 {
-	int i = 0;
+	int digits, i = 0;
 	int *arr;
 	int count = 0;
 	unsigned int temp = n;
@@ -24,19 +24,21 @@ int printf_hex_helper(unsigned int n)
 
 	while (i < count)
 	{
-		arr[i] = temp % 16;
+		digits = temp % 16;
+		if (digit < 10)
+		{
+			arr[i] = digit + '0';
+		}
+		else
+		{
+			arr[i] = digit - 10 + 'a';
+		}
 		temp /= 16;
 		i++;
 	}
-	i = count - 1;
-	while (i >= 0)
+	for (i = count - 1; i >= 0; i--)
 	{
-		if (arr[i] > 9)
-		{
-			arr[i] = arr[i] + 39;
-		}
-		_putchar(arr[i] + '0');
-		i--;
+		_putchar(arr[i]);
 	}
 	free(arr);
 	return (count);
