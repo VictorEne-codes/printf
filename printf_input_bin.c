@@ -5,7 +5,7 @@
  * @par: the arguments to be printed.
  * Return: Always 1 if success.
  */
-int printf_bin(va_list par)
+int printf_input_bin(va_list par)
 {
 	unsigned int num = va_arg(par, unsigned int);
 	unsigned int p;
