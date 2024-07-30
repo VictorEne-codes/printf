@@ -9,7 +9,7 @@
 
 int printf_hex_helper(unsigned int n)
 {
-	int digits, i = 0;
+	int digit, i = 0;
 	int *arr;
 	int count = 0;
 	unsigned int temp = n;
@@ -24,7 +24,7 @@ int printf_hex_helper(unsigned int n)
 
 	while (i < count)
 	{
-		digits = temp % 16;
+		digit = temp % 16;
 		if (digit < 10)
 		{
 			arr[i] = digit + '0';
