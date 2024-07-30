@@ -7,7 +7,7 @@
  * Return: int
  */
 
-int printf_exclusive_strings(va_list par)
+int printf_input_exclusive_strings(va_list par)
 {
 	char *string;
 	int i = 0, length = 0;
@@ -31,7 +31,7 @@ int printf_exclusive_strings(va_list par)
 				_putchar('0');
 				length++;
 			}
-			length = length + printf_HEX_aux(count);
+			length = length + printf_HEX_helper(count);
 		}
 		else
 		{

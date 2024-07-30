@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * printf_character - funcyion to print character to stdout
+ * printf_input_character - funcyion to print character to stdout
  * @par: input
  *
  * Return: integer 1 if success

@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * printf_string - function to print string to stdout
+ * printf_input_string - function to print string to stdout
  * @par: input
  *
  * Return: int
