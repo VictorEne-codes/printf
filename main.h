@@ -19,29 +19,29 @@
 
 int _printf(const char *format, ...);
 int printf_input_char(va_list par, char buff[],
-        int f, int w, int p, int s);
+		int f, int w, int p, int s);
 int printf_input_str(va_list par, char buff[],
-	int f, int w, int p, int s);
+		int f, int w, int p, int s);
 int printf_input_int(va_list par, char buff[],
-        int f, int w, int p, int s);
+		int f, int w, int p, int s);
 int printf_input_perc(va_list par, char buff[],
-        int f, int w, int p, int s);
+		int f, int w, int p, int s);
 int printf_input_bin(va_list par, char buff[],
-        int f, int w, int p, int s);
+		int f, int w, int p, int s);
 int printf_input_oct(va_list par, char buff[],
-        int f, int w, int p, int s);
+		int f, int w, int p, int s);
 int printf_input_unsigned(va_list par, char buff[],
 		int f, int w, int p, int s);
 int printf_input_hexa(va_list par, char buff[],
-        int f, int w, int p, int s);
+		int f, int w, int p, int s);
 int printf_input_HEXA(va_list par, char buff[],
-        int f, int w, int p, int s);
+		int f, int w, int p, int s);
 int printf_non_printable(va_list par, char buff[],
 	int f, int w, int p, int s);
 int printf_input_pointer(va_list par, char buff[],
 	int f, int w, int p, int s);
 int print_hexa(va_list par, char map[], char buff[],
-        int f, char flag_ch, int w, int p, int s);
+		int f, char flag_ch, int w, int p, int s);
 int printf_input_rot13(va_list par, char buff[],
 	int f, int w, int p, int s);
 int printf_input_rev_str(va_list par, char buff[],
