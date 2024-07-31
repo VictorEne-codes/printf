@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * printf_input_oct - prints an octal of integer
+ * printf_hexa - prints hexa of integer
  * @map: input
  * @flag_ch: input
  * @par: input
@@ -48,7 +48,7 @@ int print_hexa(va_list par, char map[], char buff[],
 }
 
 /**
- * printf_input_oct - prints an octal of integer
+ * printf_input_HEXA - prints hexadecimal of integer
  * @par: input
  * @buff: input
  * @f: flags
@@ -59,7 +59,7 @@ int print_hexa(va_list par, char map[], char buff[],
  * Return: int
  */
 
-int printf_input_hexa(va_list par, char buff[],
+int printf_input_HEXA(va_list par, char buff[],
 	int f, int w, int p, int s)
 {
 	return (print_hexa(par, "0123456789abcdef", buff,

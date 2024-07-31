@@ -40,6 +40,9 @@ int printf_non_printable(va_list par, char buff[],
 	int f, int w, int p, int s);
 int printf_input_pointer(va_list par, char buff[],
 	int f, int w, int p, int s);
+int print_hexa(va_list par, char map[], char buff[],
+        int f, char flag_ch, int w, int p, int s);
+int is_digit(char c);
 int flg(const char *format, int *i);
 int precise_print(const char *format, int *i, va_list par);
 int size_cast(const char *format, int *i);
