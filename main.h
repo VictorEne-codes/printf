@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #include <stdlib.h>
 #include <stdio.h>
 #include <stdarg.h>
@@ -48,3 +49,5 @@ typedef struct format
 
 
 #endif
+=======
+>>>>>>> 104737c7cb6baed9d623d5d0afbcdb7cf9d4fd34
