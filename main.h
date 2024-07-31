@@ -4,6 +4,15 @@
 #ifndef MAIN_H
 #define MAIN_H
 
+#define UNUSED(x) (void)(x)
+#define BUFFER_SIZE 1024
+
+#define MINUS_FLG 1
+#define PLUS_FLG 2
+#define ZERO_FLG 4
+#define HASH_FLG 8
+#define SPACE_FLG 16
+
 int _putchar(char c);
 int _printf(const char *format, ...);
 int printf_input_hexa(va_list par);
