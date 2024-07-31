@@ -25,6 +25,7 @@ int printf_helper(const char *fmt, int *ind, va_list par, char buff[],
 		{'u', printf_input_unsigned}, {'o', printf_input_oct},
 		{'x', printf_input_hexa}, {'X', printf_input_HEXA},
 		{'p', printf_input_pointer}, {'S', printf_non_printable},
+		{'r', printf_input_rev_str}, {'R', printf_input_rot13}, {'\0', NULL}
 	};
 	for (i = 0; fmt_types[i].fmt != '\0'; i++)
 		if (fmt[*ind] == fmt_types[i].fmt)

@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * print_reverse_str - Prints reverse string.
+ * printf_input_rev_str - Prints reverse string.
  * @par: inputs
  * @buff: array of input
  * @f: flag
@@ -11,15 +11,15 @@
  * Return: Numbers of chars printed
  */
 
-int printf_reverse_str(va_list par, char buff[],
-	int f, int width, int p, int s)
+int printf_input_rev_str(va_list par, char buff[],
+	int f, int w, int p, int s)
 {
 	char *str;
 	int i, count = 0;
 
 	UNUSED(buff);
 	UNUSED(f);
-	UNUSED(width);
+	UNUSED(w);
 	UNUSED(s);
 
 	str = va_arg(par, char *);
