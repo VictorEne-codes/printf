@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * print_rot13string - Entry point prints a string in rot13.
+ * printf_input_rot13 - Entry point prints a string in rot13.
  * @par: inputs
  * @buff: array of input
  * @f: flag
@@ -10,7 +10,7 @@
  * @s: s
  * Return: Numbers of chars printed
  */
-int print_rot13string(va_list types, char buff[],
+int printf_input_rot13(va_list par, char buff[],
 	int f, int w, int p, int s)
 {
 	char x;
@@ -20,7 +20,7 @@ int print_rot13string(va_list types, char buff[],
 	char in[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
 	char out[] = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
 
-	str = va_arg(types, char *);
+	str = va_arg(par, char *);
 	UNUSED(buff);
 	UNUSED(f);
 	UNUSED(w);
