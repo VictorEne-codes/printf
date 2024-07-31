@@ -1,29 +1,45 @@
 #include "main.h"
 
 /**
- * calc_width -Entry point calculates width for printing
- * @format: Formatted string where arguments are to be printed.
- * @i: Arguments to be printed.
- * @list: Arguments list.
+ * is_dig - finds a digit
+ * @c: input
  *
- * Return: width.
+ * Return: int
  */
-int calc_width(const char *format, int *i, va_list list)
+
+int is_digit(char c)
 {
-	int width = 0;
+	if (c >= '0' && c <= '9')
+		return (1);
+
+	return (0);
+}
+
+/**
+ * calc_width -Entry point calculates width for printing
+ * @format: input
+ * @i: input
+ * @par: input
+ *
+ * Return: int
+ */
+
+int calc_width(const char *format, int *i, va_list par)
+{
+	int w = 0;
 	int cur_i;
 
 	for (cur_i = *i + 1; format[cur_i] != '\0'; cur_i++)
 	{
 		if (is_digit(format[cur_i]))
 		{
-			width = width 10;
-			width = width + format[cur_i] - '0';
+			w = w * 10;
+			w = w + format[cur_i] - '0';
 		}
 		else if (format[cur_i] == '*')
 		{
 			cur_i++;
-			width = va_arg(list, int);
+			w = va_arg(par, int);
 			break;
 		}
 		else
@@ -34,5 +50,5 @@ int calc_width(const char *format, int *i, va_list list)
 
 	*i = cur_i - 1;
 
-	return (width);
+	return (w);
 }

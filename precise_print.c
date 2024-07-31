@@ -1,36 +1,52 @@
 #include "main.h"
 
 /**
- * precise_print - entry point calculates precision for printing
- * @format: Formatted string in which the arguments are to be printed
- * @i: arguments.
- * @list: arguments list.
+ * is_digit - finds a digit
+ * @c: input
  *
- * Return: Precision.
+ * Return: int
  */
-int precise_print(const char *format, int *i, va_list list)
+
+int is_digit(char c)
 {
-	int precision = -1;
+	if (c >= '0' && c <= '9')
+		return (1);
+
+	return (0);
+}
+
+/**
+ * precise_print - entry point calculates precision for printing
+ * @format: input
+ * @i: input
+ * @par: input
+ *
+ * Return: int
+ */
+
+int precise_print(const char *format, int *i, va_list par)
+{
+	int p = -1;
 	int cur_i = *i + 1;
 
 	if (format[cur_i] != '.')
 	{
-		return (precision);
+		return (p);
 	}
 
-	precision = 0;
+	p = 0;
 
 	for (cur_i += 1; format[cur_i] != '\0'; cur_i++)
 	{
 		if (is_digit(format[cur_i]))
 		{
-			precision = precision * 10;
-			precision = precision + format[cur_i] - '0';
+			p = p * 10;
+			p = p + format[cur_i] - '0';
 		}
 		else if (format[cur_i] == '*')
 		{
 			cur_i++;
-			precision = va_arg(list, int);
+			p = va_arg(par, int);
 			break;
 		}
 		else
@@ -39,5 +55,5 @@ int precise_print(const char *format, int *i, va_list list)
 
 	*i = cur_i - 1;
 
-	return (precision);
+	return (p);
 }

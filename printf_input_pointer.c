@@ -1,5 +1,8 @@
 #include "main.h"
 
+int write_pointer(char buff[], int ind, int l,
+        int w, int f, char padd, char extra_c, int padd_start);
+
 /**
  * printf_input_pointer - Entry point Prints the value in a pointer variable
  * @par: array of inputs

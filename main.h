@@ -24,7 +24,10 @@ int printf_input_hexa(va_list par, char buff[],
         int f, int w, int p, int s);
 int printf_input_hexa(va_list par, char buff[],
         int f, int w, int p, int s);
-
+int flg(const char *format, int *i);
+int precise_print(const char *format, int *i, va_list par);
+int size_cast(const char *format, int *i);
+int calc_width(const char *format, int *i, va_list par);
 
 
 #endif
