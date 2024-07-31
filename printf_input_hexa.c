@@ -1,7 +1,7 @@
 #include "main.h"
- 
+
 /**
-* printf_input_hexa - prints hexadecimal of integer
+ * printf_input_hexa - prints hexadecimal of integer
  * @par: input
  * @buff: input
  * @f: flags
