@@ -3,13 +3,13 @@
 /**
  * printf_helper - helps printf
  * @ind: input
- * fmt: input
+ * @fmt: input
  * @par: input
  * @buff: input
  * @f: flags
  * @w: width
  * @p: precision
- * @size
+ * @s: size
  *
  * Return: int
  */
@@ -19,7 +19,7 @@ int printf_helper(const char *fmt, int *ind, va_list par, char buff[],
 {
 	int i, u_len = 0, printed_ch = -1;
 	fmt_t fmt_types[] = {
-		{'c', printf_input_char}, {'s', printf_input_string},
+		{'c', printf_input_char}, {'s', printf_input_str},
 		{'%', printf_input_perc}, {'i', printf_input_int},
 		{'d', printf_input_int}, {'b', printf_input_bin},
 		{'u', printf_input_unsigned}, {'o', printf_input_oct},
@@ -56,7 +56,7 @@ int printf_helper(const char *fmt, int *ind, va_list par, char buff[],
 /**
  * printf_buffer - prints a buffer
  * @buff: input
- * @buff_ind
+ * @buff_ind: input
  *
  * Return: void
  */
@@ -101,8 +101,8 @@ int _printf(const char *format, ...)
 		{
 			printf_buffer(buff, &buff_ind);
 			f = flg(format, &i);
-			w = calc_width(format, &i, list);
-			p = precise_print(format, &i, list);
+			w = calc_width(format, &i, par);
+			p = precise_print(format, &i, par);
 			s = size_cast(format, &i);
 			++i;
 			printed = printf_helper(format, &i, par, buff,

@@ -1,5 +1,8 @@
 #include "main.h"
 
+int is_printable(char c);
+int append_hexa_code(char ascii_code, char buff[], int i);
+
 /**
  * printf_non_printable - Entry point Prints ascii codes of non printable chars
  * @par: inputs
@@ -10,11 +13,12 @@
  * @s: size
  * Return: Number of chars printed
  */
-int printf_non_printable(va_list types, char buff[],
+
+int printf_non_printable(va_list par, char buff[],
 	int f, int w, int p, int s)
 {
 	int i = 0, offset = 0;
-	char *str = va_arg(types, char *);
+	char *str = va_arg(par, char *);
 
 	UNUSED(f);
 	UNUSED(w);

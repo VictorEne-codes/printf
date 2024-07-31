@@ -95,7 +95,7 @@ int printf_input_oct(va_list par, char buff[],
 
 	UNUSED(w);
 
-	num = convert_unsgnd(num, size);
+	num = convert_unsgnd(num, s);
 
 	if (num == 0)
 		buff[i--] = '0';

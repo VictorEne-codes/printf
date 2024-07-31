@@ -90,7 +90,7 @@ int printf_input_unsigned(va_list par, char buff[],
 	int i = BUFF_SIZE - 2;
 	unsigned long int num = va_arg(par, unsigned long int);
 
-	num = convert_unsgn(n, size);
+	num = convert_unsgn(num, s);
 
 	if (num == 0)
 		buff[i--] = '0';
@@ -101,5 +101,5 @@ int printf_input_unsigned(va_list par, char buff[],
 		num /= 10;
 	}
 	i++;
-	return (write_unsgn(0, i, b, f, w, p, s));
+	return (write_unsgn(0, i, buff, f, w, p, s));
 }

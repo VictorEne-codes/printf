@@ -1,4 +1,4 @@
-#incude "main.h"
+#include "main.h"
 
 /**
  * write_num - writes out a number
@@ -95,6 +95,24 @@ int write_numbers(int is_neg, int ind, char buff[],
 }
 
 /**
+ * convert_number - convert an integer
+ * @n: input
+ * @size: input
+ *
+ * Return: int
+ */
+
+long int convert_number(long int n, int size)
+{
+	if (size == S_LONG)
+		return (n);
+	else if (size == S_SHORT)
+		return ((short)n);
+
+	return ((int)n);
+}
+
+/**
  * printf_input_int - prints a string
  * @par: input
  * @buff: input
@@ -114,7 +132,7 @@ int printf_input_int(va_list par, char buff[],
 	long int n = va_arg(par, long int);
 	unsigned long int num;
 
-	n = convert_number(n, size);
+	n = convert_number(n, s);
 
 	if (n == 0)
 		buff[i--] = '0';

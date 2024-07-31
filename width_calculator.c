@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * is_dig - finds a digit
+ * is_digit - finds a digit
  * @c: input
  *
  * Return: int

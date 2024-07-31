@@ -1,7 +1,7 @@
 #include "main.h"
 
 int write_pointer(char buff[], int ind, int l,
-        int w, int f, char padd, char extra_c, int padd_start);
+		int w, int f, char padd, char extra_c, int padd_start);
 
 /**
  * printf_input_pointer - Entry point Prints the value in a pointer variable
@@ -16,8 +16,8 @@ int write_pointer(char buff[], int ind, int l,
 int printf_input_pointer(va_list par, char buff[],
 	int f, int w, int p, int s)
 {
-	char extra_c = 0, p = ' ';
-	int ind = BUFF_s - 2, l = 2, p_start = 1;
+	char extra_c = 0, padd = ' ';
+	int ind = BUFF_SIZE - 2, l = 2, p_start = 1;
 	unsigned long num_addrs;
 	char map_to[] = "0123456789abcdef";
 	void *addrs = va_arg(par, void *);
@@ -28,7 +28,7 @@ int printf_input_pointer(va_list par, char buff[],
 	if (addrs == NULL)
 		return (write(1, "(nil)", 5));
 
-	buff[BUFF_s - 1] = '\0';
+	buff[BUFF_SIZE - 1] = '\0';
 	UNUSED(p);
 
 	num_addrs = (unsigned long)addrs;
@@ -41,7 +41,7 @@ int printf_input_pointer(va_list par, char buff[],
 	}
 
 	if ((f & F_ZERO) && !(f & F_MINUS))
-		p = '0';
+		padd = '0';
 	if (f & F_PLUS)
 		extra_c = '+', l++;
 	else if (f & F_SPACE)
@@ -50,7 +50,7 @@ int printf_input_pointer(va_list par, char buff[],
 	ind++;
 
 	return (write_pointer(buff, ind, l,
-		w, f, p, extra_c, p_start));
+		w, f, padd, extra_c, p_start));
 }
 
 /**

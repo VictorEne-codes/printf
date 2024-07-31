@@ -23,7 +23,7 @@ int print_hexa(va_list par, char map[], char buff[],
 
 	UNUSED(w);
 
-	num = convert_unsgnd(num, size);
+	num = convert_unsgn(num, s);
 
 	if (num == 0)
 		buff[i--] = '0';
@@ -44,7 +44,7 @@ int print_hexa(va_list par, char map[], char buff[],
 
 	i++;
 
-	return (write_unsgnd(0, i, buff, f, w, p, s));
+	return (write_unsgn(0, i, buff, f, w, p, s));
 }
 
 /**
