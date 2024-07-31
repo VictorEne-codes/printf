@@ -2,10 +2,10 @@
 
 /**
  * printf_input_pointer - Entry point Prints the value in a pointer variable
- * @par: array of inputs
- * @buff: input
- * @f: f
- * @w: f
+ * @par: inputs
+ * @buff: array of input
+ * @f: flags
+ * @w: flags
  * @p: precision
  * @s: size
  * Return: Number of chars printed.
@@ -14,7 +14,7 @@ int printf_input_pointer(va_list par, char buff[],
 	int f, int w, int p, int s)
 {
 	char extra_c = 0, p = ' ';
-	int ind = BUFF_s - 2, l = 2, p_start = 1; /* l=2, for '0x' */
+	int ind = BUFF_s - 2, l = 2, p_start = 1;
 	unsigned long num_addrs;
 	char map_to[] = "0123456789abcdef";
 	void *addrs = va_arg(par, void *);
